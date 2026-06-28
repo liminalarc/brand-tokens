@@ -6,7 +6,9 @@
   "type": "module",
   "files": [
     "dist",
-    "tokens.json"
+    "tokens.json",
+    "DESIGN-SYSTEM.md",
+    "CHANGELOG.md"
   ],
   "main": "./dist/tokens.js",
   "types": "./dist/tokens.d.ts",
