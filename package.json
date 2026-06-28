@@ -1,0 +1,26 @@
+{
+  "name": "brand-tokens",
+  "version": "0.1.0",
+  "description": "Brand design tokens (color, typography, radius, shadow) — light + dark, framework-agnostic. Single source of truth across apps.",
+  "license": "UNLICENSED",
+  "type": "module",
+  "files": [
+    "dist",
+    "tokens.json"
+  ],
+  "main": "./dist/tokens.js",
+  "types": "./dist/tokens.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/tokens.d.ts",
+      "default": "./dist/tokens.js"
+    },
+    "./css": "./dist/tokens.css",
+    "./scss": "./dist/tokens.scss",
+    "./tokens.json": "./tokens.json"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "prepare": "node build.mjs"
+  }
+}

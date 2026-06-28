@@ -1,0 +1,6 @@
+node_modules/
+*.log
+.DS_Store
+
+# dist/ is intentionally COMMITTED so git-dependency consumers get built
+# tokens without running a build. Regenerate with `npm run build`.
