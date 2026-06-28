@@ -14,6 +14,7 @@ for (const [name, v] of Object.entries(t.color)) {
 }
 
 const radius = Object.entries(t.radius).map(([k, v]) => `  ${P}-radius-${k}: ${v};`);
+const space = Object.entries(t.space).map(([k, v]) => `  ${P}-space-${k}: ${v};`);
 
 const shadowLight = Object.entries(t.shadow).map(([k, v]) => `  ${P}-shadow-${k}: ${v.light};`);
 const shadowDark = Object.entries(t.shadow).map(([k, v]) => `  ${P}-shadow-${k}: ${v.dark};`);
@@ -36,6 +37,9 @@ ${colorLight.join('\n')}
 
   /* radius */
 ${radius.join('\n')}
+
+  /* spacing */
+${space.join('\n')}
 
   /* shadow */
 ${shadowLight.join('\n')}

@@ -3,6 +3,13 @@
 All notable changes to brand-tokens. Format: [Keep a Changelog](https://keepachangelog.com);
 versioning: [Semver](https://semver.org) (patch = value tweak · minor = token added · major = token renamed/removed).
 
+## [0.4.0]
+
+### Added
+- **Spacing scale** `--sb-space-{xs,sm,md,lg,xl,2xl,3xl}` (4/8/12/16/24/32/48px) — a
+  shared rhythm system for padding/gap/margin. (Several StormBoard components already
+  referenced these names; they were previously undefined.)
+
 ## [0.3.1]
 
 ### Changed
