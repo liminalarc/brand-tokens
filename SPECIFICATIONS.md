@@ -15,7 +15,7 @@ shipped specs to the `## Archive` section. (`/flow` project.)
 | 5 | Consumer adoption (StormBoard + others) | IN PROGRESS |
 | 6 | Token validation (schema + WCAG AA contrast) | NOT STARTED |
 | 7 | Style Dictionary migration (more targets) | FUTURE |
-| 8 | Shared component CSS layer | FUTURE |
+| 8 | Shared component CSS layer | DONE |
 
 ---
 
@@ -110,16 +110,15 @@ a real second-stack consumer exists.
 ---
 
 ### Spec 8 — Shared component CSS layer
-**Status:** FUTURE
+**Status:** DONE (v0.3.0)
 
-Optional framework-agnostic component classes (`.btn`, `.badge`, `.field`, card,
-dialog, table) built on the tokens — reusable across apps regardless of framework.
-Mirrors the specimens on StormBoard's `/admin/brand`.
+Framework-agnostic component classes built on the tokens — reusable across apps
+regardless of framework. Mirrors the specimens on StormBoard's `/admin/brand`.
 
 **Acceptance criteria:**
-- [ ] Decide scope (which components earn a shared class)
-- [ ] Ship as `dist/components.css`, opt-in import
-- [ ] Document in DESIGN-SYSTEM.md
+- [x] Decide scope: `.sb-btn` (+ variants/sizes/states), `.sb-badge`/`.sb-chip`, `.sb-field`, `.sb-card`, `.sb-table`
+- [x] Ship as `dist/components.css`, opt-in import (`brand-tokens/components`); namespaced `.sb-*`
+- [x] Source `components.css` copied to dist by `build.mjs`; documented in README + CHANGELOG
 
 ---
 

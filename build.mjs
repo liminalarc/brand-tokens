@@ -80,4 +80,7 @@ export declare const lightValues: Record<TokenName, string>;
 export declare const darkValues: Record<TokenName, string>;
 `);
 
-console.log(`Built dist/tokens.{css,scss,js,d.ts} from ${Object.keys(t.color).length} colors (v${t.$version}).`);
+// Copy the hand-authored component layer through to dist (built on the tokens above).
+writeFileSync(here('./dist/components.css'), readFileSync(here('./components.css'), 'utf8'));
+
+console.log(`Built dist/tokens.{css,scss,js,d.ts} + components.css from ${Object.keys(t.color).length} colors (v${t.$version}).`);

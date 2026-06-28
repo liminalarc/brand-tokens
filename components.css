@@ -1,0 +1,152 @@
+/*
+ * brand-tokens — shared component layer (opt-in).
+ * Framework-agnostic primitives built entirely on the --sb-* tokens. Apply the
+ * classes in any app (Angular, React, plain HTML). Namespaced `.sb-*` to avoid
+ * collisions with framework/component-library classes (e.g. Angular Material).
+ *
+ * Import AFTER tokens.css:  @import "brand-tokens/css"; @import "brand-tokens/components";
+ * Source of truth — edit here; `npm run build` copies this to dist/.
+ */
+
+/* ============================ Buttons ============================ */
+.sb-btn {
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border: 1px solid transparent;
+  border-radius: var(--sb-radius-md);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.15s, border-color 0.15s, color 0.15s, filter 0.15s;
+}
+.sb-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--sb-primary-surface), 0 0 0 4px var(--sb-primary);
+}
+.sb-btn[disabled],
+.sb-btn.sb-btn--disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.sb-btn--sm { padding: 6px 12px; font-size: 0.82rem; }
+.sb-btn--lg { padding: 12px 24px; font-size: 1rem; }
+
+.sb-btn--primary { background: var(--sb-primary); color: var(--sb-text-inverse); }
+.sb-btn--primary:hover { background: var(--sb-primary-strong); }
+.sb-btn--primary:active { background: var(--sb-primary-strong); filter: brightness(0.93); }
+
+.sb-btn--accent { background: var(--sb-accent-strong); color: var(--sb-text-inverse); }
+.sb-btn--accent:hover { filter: brightness(1.06); }
+.sb-btn--accent:active { filter: brightness(0.94); }
+
+.sb-btn--secondary {
+  background: transparent;
+  color: var(--sb-primary);
+  border-color: var(--sb-border-light);
+}
+.sb-btn--secondary:hover { background: var(--sb-primary-surface); border-color: var(--sb-primary); }
+
+.sb-btn--ghost { background: transparent; color: var(--sb-text-secondary); }
+.sb-btn--ghost:hover { background: var(--sb-surface-hover); }
+
+.sb-btn--danger { background: var(--sb-error); color: var(--sb-text-inverse); }
+.sb-btn--danger:hover { filter: brightness(1.06); }
+
+/* ============================ Badges / chips ============================ */
+.sb-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border: 1px solid transparent;
+  border-radius: var(--sb-radius-xl);
+  font-size: 0.74rem;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+.sb-badge .sb-badge__dot { width: 7px; height: 7px; border-radius: var(--sb-radius-full); background: currentColor; }
+.sb-badge--neutral { background: var(--sb-surface-hover); color: var(--sb-text-secondary); }
+.sb-badge--primary { background: var(--sb-primary-surface); color: var(--sb-primary-strong); }
+.sb-badge--accent  { background: var(--sb-accent-surface); color: var(--sb-accent-strong); }
+.sb-badge--success { background: var(--sb-success-surface); color: var(--sb-success-text); }
+.sb-badge--info    { background: var(--sb-info-surface); color: var(--sb-info); }
+.sb-badge--warn    { background: var(--sb-warning-surface); color: var(--sb-warning); }
+.sb-badge--error   { background: var(--sb-error-surface); color: var(--sb-error); }
+.sb-badge--ai      { background: var(--sb-ai-surface); color: var(--sb-ai); }
+
+/* Chip = interactive badge */
+.sb-chip { cursor: pointer; transition: filter 0.15s, background-color 0.15s; }
+.sb-chip:hover { filter: brightness(0.97); }
+
+/* ============================ Inputs ============================ */
+.sb-field { display: flex; flex-direction: column; gap: 5px; }
+.sb-field > label { font-size: 0.8rem; font-weight: 600; color: var(--sb-text-secondary); }
+.sb-field input,
+.sb-field select,
+.sb-field textarea {
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 9px 12px;
+  color: var(--sb-text);
+  background: var(--sb-surface);
+  border: 1px solid var(--sb-border-light);
+  border-radius: var(--sb-radius-md);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.sb-field input::placeholder,
+.sb-field textarea::placeholder { color: var(--sb-text-faint); }
+.sb-field input:focus,
+.sb-field select:focus,
+.sb-field textarea:focus { border-color: var(--sb-primary); box-shadow: 0 0 0 3px var(--sb-primary-surface); }
+.sb-field .sb-field__hint { font-size: 0.74rem; color: var(--sb-text-muted); }
+.sb-field--error input,
+.sb-field--error select,
+.sb-field--error textarea { border-color: var(--sb-error); }
+.sb-field--error .sb-field__hint { color: var(--sb-error); }
+
+/* ============================ Cards ============================ */
+.sb-card {
+  background: var(--sb-surface);
+  border: 1px solid var(--sb-border);
+  border-radius: var(--sb-radius-lg);
+  box-shadow: var(--sb-shadow-md);
+  overflow: hidden;
+}
+.sb-card__body { padding: 16px 18px; }
+.sb-card__foot {
+  padding: 12px 18px;
+  border-top: 1px solid var(--sb-border);
+  background: var(--sb-surface-variant);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ============================ Tables ============================ */
+.sb-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+.sb-table th {
+  text-align: left;
+  font-size: 0.74rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--sb-text-muted);
+  font-weight: 600;
+  padding: 9px 12px;
+  border-bottom: 2px solid var(--sb-border);
+}
+.sb-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--sb-border);
+  font-variant-numeric: tabular-nums;
+}
+.sb-table tr:last-child td { border-bottom: none; }
+.sb-table tbody tr.sb-table__zebra { background: var(--sb-surface-variant); }

@@ -29,6 +29,12 @@ Then import the CSS once in your global stylesheet:
 Set `<html data-theme="dark">` to switch themes. That's it — every `--sb-*`
 custom property is now available app-wide.
 
+Optionally add the framework-agnostic component layer (namespaced `.sb-*`):
+```css
+@import "brand-tokens/css";
+@import "brand-tokens/components";   /* .sb-btn, .sb-badge/.sb-chip, .sb-field, .sb-card, .sb-table */
+```
+
 ### Option B — SCSS
 ```scss
 @use "brand-tokens/scss";   /* same custom properties, usable from SCSS */

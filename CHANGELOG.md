@@ -3,6 +3,14 @@
 All notable changes to brand-tokens. Format: [Keep a Changelog](https://keepachangelog.com);
 versioning: [Semver](https://semver.org) (patch = value tweak · minor = token added · major = token renamed/removed).
 
+## [0.3.0]
+
+### Added
+- **Shared component layer** `dist/components.css` (opt-in, import `brand-tokens/components`) —
+  framework-agnostic primitives built on the tokens: `.sb-btn` (+ primary/accent/secondary/ghost/danger,
+  sizes, hover/active/focus-visible/disabled states), `.sb-badge`/`.sb-chip`, `.sb-field` (inputs),
+  `.sb-card`, `.sb-table`. Namespaced `.sb-*` to avoid collisions with framework classes.
+
 ## [0.2.0]
 
 ### Added
