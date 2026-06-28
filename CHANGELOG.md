@@ -3,6 +3,16 @@
 All notable changes to brand-tokens. Format: [Keep a Changelog](https://keepachangelog.com);
 versioning: [Semver](https://semver.org) (patch = value tweak · minor = token added · major = token renamed/removed).
 
+## [0.3.1]
+
+### Changed
+- WCAG AA contrast fixes (light mode): `text-faint` `#97a3a3`→`#7e8989` (3.6:1) and
+  `warning` `#b5740a`→`#946007` (4.7:1 as text on `warning-surface`). Dark mode already passed.
+
+### Added
+- `contrast-audit.mjs` + `npm run audit` — checks key text/bg pairings in both themes,
+  exits non-zero on failure (Spec 6 groundwork; CI-gate ready).
+
 ## [0.3.0]
 
 ### Added

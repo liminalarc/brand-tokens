@@ -13,7 +13,7 @@ shipped specs to the `## Archive` section. (`/flow` project.)
 | 3 | Versioning + release process | NOT STARTED |
 | 4 | CI: build + validate on PR, release on tag | NOT STARTED |
 | 5 | Consumer adoption (StormBoard + others) | IN PROGRESS |
-| 6 | Token validation (schema + WCAG AA contrast) | NOT STARTED |
+| 6 | Token validation (schema + WCAG AA contrast) | IN PROGRESS |
 | 7 | Style Dictionary migration (more targets) | FUTURE |
 | 8 | Shared component CSS layer | DONE |
 
@@ -87,12 +87,12 @@ the brand and re-themes from one place.
 ---
 
 ### Spec 6 — Token validation
-**Status:** NOT STARTED
+**Status:** IN PROGRESS
 
 **Acceptance criteria:**
 - [ ] Schema-validate `tokens.json` (every color has light + dark; valid hex/value)
-- [ ] WCAG AA contrast checks for the documented text-on-fill pairings
-- [ ] Run validation in CI
+- [x] WCAG AA contrast checks for the documented text-on-fill pairings — `contrast-audit.mjs` / `npm run audit`, both themes, exits non-zero on failure (all pass as of v0.3.1)
+- [ ] Run validation in CI (script is CI-gate ready; wire once Spec 4 CI lands)
 
 ---
 
