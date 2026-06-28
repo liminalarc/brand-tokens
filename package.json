@@ -1,6 +1,6 @@
 {
   "name": "brand-tokens",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Brand design tokens (color, typography, radius, shadow) — light + dark, framework-agnostic. Single source of truth across apps.",
   "license": "UNLICENSED",
   "type": "module",
