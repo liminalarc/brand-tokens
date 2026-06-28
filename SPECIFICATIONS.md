@@ -79,8 +79,8 @@ drifts from `tokens.json` and releases are automatic.
 the brand and re-themes from one place.
 
 **Acceptance criteria:**
-- [ ] StormBoard imports `dist/tokens.css` instead of its hand-maintained `_tokens.scss` core (StormBoard's app-specific tokens — event-storming colors, workspace nodes, etc. — stay in StormBoard)
-- [ ] At least one other app consumes the package (validates cross-repo/org consumption)
+- [x] StormBoard imports `dist/tokens.css` (via angular.json) instead of its hand-maintained `_tokens.scss` core; app-specific tokens (event-storming colors, workspace nodes, etc.) stay in StormBoard
+- [ ] At least one other app consumes the package (validates cross-repo/org consumption) — Prism, pending its move into the `liminalarc` org
 - [ ] Each consumer runs Dependabot/Renovate watching this dependency
 - [ ] Decide distribution channel: public repo + git-tag dep (default) vs GitHub Packages vs public npm
 
