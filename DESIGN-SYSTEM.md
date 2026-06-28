@@ -198,7 +198,9 @@ Headings get `text-wrap: balance`.
 
 ---
 
-## 5. Radius & shadow scales
+## 5. Spacing, radius & shadow scales
+
+**Spacing:** `--sb-space-xs` 4px · `sm` 8px · `md` 12px · `lg` 16px · `xl` 24px · `2xl` 32px · `3xl` 48px. Use for padding / gap / margin instead of ad-hoc px.
 
 **Radius:** `--sb-radius-xs` 2px · `sm` 4px · `md` 8px (default control) · `lg` 12px (cards/dialogs) · `xl` 16px (pills/chips) · `full` 50% (dots/avatars).
 
@@ -207,6 +209,8 @@ Headings get `text-wrap: balance`.
 ---
 
 ## 6. Component conventions
+
+> **Shipped as a ready-to-use layer:** import `brand-tokens/components` (`dist/components.css`) for these as **namespaced `.sb-*` classes** — `.sb-btn` (+ `--primary/--accent/--secondary/--ghost/--danger`, `--sm/--lg`, real `:hover/:active/:focus-visible/[disabled]`), `.sb-badge`/`.sb-chip` (+ semantic variants, `.sb-badge__dot`), `.sb-field` (+ `--error`, `__hint`), `.sb-card` (+ `__body`/`__foot`), `.sb-table` (+ `__zebra`). Apply the classes directly in any framework, or build your own to the spec below. Components that come from a framework's own library (e.g. Angular Material buttons) should be themed via the **tokens**, not these classes.
 
 One shape language. Controls share `--sb-radius-md`; cards/dialogs `--sb-radius-lg`; chips/pills `--sb-radius-xl`.
 
