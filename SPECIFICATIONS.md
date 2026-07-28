@@ -16,6 +16,7 @@ shipped specs to the `## Archive` section. (`/flow` project.)
 | 6 | Token validation (schema + WCAG AA contrast) | IN PROGRESS |
 | 7 | Style Dictionary migration (more targets) | FUTURE |
 | 8 | Shared component CSS layer | DONE |
+| 9 | Hero-gradient tokens (upstream LitmusAI stopgap) | DONE |
 
 ---
 
@@ -125,3 +126,18 @@ regardless of framework. Mirrors the specimens on StormBoard's `/admin/brand`.
 ## Archive
 
 _(Fully shipped specs move here, number preserved.)_
+
+---
+
+### Spec 9 — Hero-gradient tokens
+**Status:** DONE
+
+Add the LiminalArc hero-gradient palette `--sb-hero-{dark,mid,light}` to the package.
+Stormboard's local copy and LitmusAI's documented stopgap (`web/src/styles.css`, its spec 2.6)
+both carried these values privately; the package is the single source of truth, so they move
+here. Permanently-dark brand surface: identical light/dark values, content pairs with `on-dark`.
+
+**Acceptance criteria:**
+- [x] `--sb-hero-dark/-mid/-light` in `tokens.json` with light+dark parity
+- [x] `dist/` rebuilt and committed; values #062935 / #0d4a63 / #1a6b8a
+- [x] Released as v0.5.0 (minor — tokens added) so consumers can bump and delete local copies

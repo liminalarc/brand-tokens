@@ -3,6 +3,14 @@
 All notable changes to brand-tokens. Format: [Keep a Changelog](https://keepachangelog.com);
 versioning: [Semver](https://semver.org) (patch = value tweak · minor = token added · major = token renamed/removed).
 
+## [0.5.0]
+
+### Added
+- **Hero-gradient tokens** `--sb-hero-{dark,mid,light}` (#062935 / #0d4a63 / #1a6b8a) — the
+  permanently-dark brand chrome (Stormboard toolbar, LitmusAI topbar). Same value in both
+  themes; pair content with `on-dark`. Upstreams LitmusAI's documented local stopgap
+  (its spec 2.6) so consumers resolve the hero palette from the package again.
+
 ## [0.4.0]
 
 ### Added
